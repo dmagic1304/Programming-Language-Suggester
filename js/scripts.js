@@ -9,8 +9,11 @@ function handleInput(event) {
   const answer6 = document.querySelector("input[name='question6']:checked").value;
   const answer7 = document.querySelector("input[name='question7']:checked").value;
 
+  if (answer1 === 'yes') {
+    document.getElementById("result").innerText = "Ruby";
+  }
   
-  console.log(answer1, answer2, answer3, answer4, answer5, answer6, answer7);
+  document.getElementById("result-container").removeAttribute("class");
 }
 
 
