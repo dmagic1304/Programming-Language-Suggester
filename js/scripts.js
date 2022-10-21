@@ -26,6 +26,12 @@ function handleInput(event) {
   } else if (answer5 === 'desktop' && answer6 === 'yes') {
     document.getElementById("result").innerText = "JavaScript";
   }
+
+  if (answer7 === 'tab') {
+    //show awesome paragraph
+  } else {
+    //show not so awesome paragraph
+  }
   
   document.getElementById("result-container").removeAttribute("class");
 }
