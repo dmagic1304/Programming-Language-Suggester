@@ -48,5 +48,4 @@ window.addEventListener("load", function(){
     document.getElementById("submit-button").removeAttribute("class");
     document.getElementById("result-container").setAttribute("class", "hidden");
   })
-
 })
