@@ -44,20 +44,23 @@ function handleInput(event) {
   
   document.getElementById("name").innerText = name;
   document.getElementById("result-container").removeAttribute("class");
-  document.getElementById("result-container").scrollIntoView();
+  document.getElementById("result-container").scrollIntoView({behavior: 'smooth', block: 'center'});
   document.getElementById("submit-button").setAttribute("class", "hidden");
+  document.getElementById("reset-button").removeAttribute("class");
 }
 
+function resetBtn () {
+  document.getElementById("submit-button").removeAttribute("class");
+  document.getElementById("result-container").setAttribute("class", "hidden");
+  document.getElementById("tab-yes").setAttribute("class", "hidden");
+  document.getElementById("tab-no").setAttribute("class", "hidden");
+  document.getElementById("form-intro").scrollIntoView();
+  document.getElementById("reset-button").setAttribute("class", "hidden");
+}
 
 window.addEventListener("load", function(){
   const form = document.querySelector("form");
   const resetButton = document.getElementById('reset-button');
   form.addEventListener("submit", handleInput);
-  resetButton.addEventListener("click", function() {
-    document.getElementById("submit-button").removeAttribute("class");
-    document.getElementById("result-container").setAttribute("class", "hidden");
-    document.getElementById("tab-yes").setAttribute("class", "hidden");
-    document.getElementById("tab-no").setAttribute("class", "hidden");
-    document.getElementById("form-intro").scrollIntoView();
-  })
+  resetButton.addEventListener("click", resetBtn);
 })
