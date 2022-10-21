@@ -1,3 +1,16 @@
+function resetForm () {
+  document.getElementById('input-name').value = '';
+  document.querySelector("input[name='question1']").checked = false;
+  document.querySelector("input[name='question2']").checked = false;
+  document.querySelector("input[name='question3']").checked = false;
+  document.querySelector("input[name='question4']").checked = false;
+  document.querySelector("input[name='question5']").checked = false;
+  document.querySelector("input[name='question6']").checked = false;
+  document.querySelector("input[name='question7']").checked = false;
+
+  document.getElementById("result-container").setAttribute("class", "hidden");
+}
+
 function handleInput(event) {
   event.preventDefault();
   
@@ -36,6 +49,7 @@ function handleInput(event) {
   
   document.getElementById("name").innerText = name;
   document.getElementById("result-container").removeAttribute("class");
+  resetForm();
 }
 
 
