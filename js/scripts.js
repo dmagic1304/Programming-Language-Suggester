@@ -36,7 +36,9 @@ function handleInput(event) {
   
   document.getElementById("name").innerText = name;
   document.getElementById("result-container").removeAttribute("class");
+  document.getElementById("result-container").scrollIntoView();
   document.getElementById("submit-button").setAttribute("class", "hidden");
+
 }
 
 
