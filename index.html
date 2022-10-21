@@ -19,9 +19,9 @@
       <ol>
         <li>
           <p>Do you like to be challenged?</p>
-          <input type="radio" id="question1" name="question1" value="yes" required>
+          <input type="radio" class="question1" id="question1" name="question1" value="yes" required>
           <label for="question1">Yes</label>
-          <input type="radio" id="question1" name="question1" value="no">
+          <input type="radio" class="question1" id="question1" name="question1" value="no">
           <label for="question1">No</label>
         </li>
         <li>
@@ -67,6 +67,7 @@
           <label for="question7">Space</label>
         </li>
         <button type="submit">Find out!</button>
+        <button id="reset-button" type="reset">Reset form</button>
       </ol>
     </form>
     <div class="hidden" id="result-container">
