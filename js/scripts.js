@@ -1,6 +1,7 @@
 function handleInput(event) {
   event.preventDefault();
   
+  const name = document.getElementById('input-name').value
   const answer1 = document.querySelector("input[name='question1']:checked").value;
   const answer2 = document.querySelector("input[name='question2']:checked").value;
   const answer3 = document.querySelector("input[name='question3']:checked").value;
@@ -28,11 +29,12 @@ function handleInput(event) {
   }
 
   if (answer7 === 'tab') {
-    //show awesome paragraph
+    document.getElementById("tab-yes").removeAttribute("class");
   } else {
-    //show not so awesome paragraph
+    document.getElementById("tab-no").removeAttribute("class");
   }
   
+  document.getElementById("name").innerText = name;
   document.getElementById("result-container").removeAttribute("class");
 }
 
