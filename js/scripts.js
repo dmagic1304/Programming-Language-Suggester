@@ -12,20 +12,28 @@ function handleInput(event) {
 
   if (answer1 === 'yes' && answer2 === 'logical') {
     document.getElementById("result").innerText = "C++";
+    document.getElementById("result-big").innerText = "C++";
   } else if (answer2 === 'creative' && answer3 === 'web') {
     document.getElementById("result").innerText = "JavaScript";
+    document.getElementById("result-big").innerText = "JavaScript";
   } else if (answer3 === 'software' && answer4 === 'windows') {
     document.getElementById("result").innerText = "Python";
+    document.getElementById("result-big").innerText = "Python";
   } else if (answer4 === 'macos' && answer5 === 'desktop') {
     document.getElementById("result").innerText = "Ruby";
+    document.getElementById("result-big").innerText = "Ruby";
   } else if (answer5 === 'mobile' && answer6 === 'yes') {
     document.getElementById("result").innerText = "C#";
+    document.getElementById("result-big").innerText = "C#";
   } else if (answer5 === 'mobile' && answer6 === 'no') {
     document.getElementById("result").innerText = "C++";
+    document.getElementById("result-big").innerText = "C++";
   } else if (answer5 === 'desktop' && answer6 === 'no') {
     document.getElementById("result").innerText = "Python";
+    document.getElementById("result-big").innerText = "Python";
   } else if (answer5 === 'desktop' && answer6 === 'yes') {
     document.getElementById("result").innerText = "JavaScript";
+    document.getElementById("result-big").innerText = "JavaScript";
   }
 
   if (answer7 === 'tab') {
@@ -50,5 +58,6 @@ window.addEventListener("load", function(){
     document.getElementById("result-container").setAttribute("class", "hidden");
     document.getElementById("tab-yes").setAttribute("class", "hidden");
     document.getElementById("tab-no").setAttribute("class", "hidden");
+    document.getElementById("form-intro").scrollIntoView();
   })
 })
