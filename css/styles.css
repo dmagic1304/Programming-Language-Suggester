@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url(../img/background.webp);
   background-color: rgba(0, 0, 0, 0.259);
@@ -50,6 +54,10 @@ body {
 .main ul p {
   font-weight: 700;
   text-decoration: underline;
+}
+
+.main ul li {
+  transition: font-size 1s;
 }
 
 .main ul li:hover {

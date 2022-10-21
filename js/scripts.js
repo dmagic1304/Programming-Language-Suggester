@@ -38,7 +38,6 @@ function handleInput(event) {
   document.getElementById("result-container").removeAttribute("class");
   document.getElementById("result-container").scrollIntoView();
   document.getElementById("submit-button").setAttribute("class", "hidden");
-
 }
 
 
@@ -49,5 +48,7 @@ window.addEventListener("load", function(){
   resetButton.addEventListener("click", function() {
     document.getElementById("submit-button").removeAttribute("class");
     document.getElementById("result-container").setAttribute("class", "hidden");
+    document.getElementById("tab-yes").setAttribute("class", "hidden");
+    document.getElementById("tab-no").setAttribute("class", "hidden");
   })
 })
