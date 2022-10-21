@@ -9,6 +9,9 @@ function handleInput(event) {
   const answer5 = document.querySelector("input[name='question5']:checked").value;
   const answer6 = document.querySelector("input[name='question6']:checked").value;
   const answer7 = document.querySelector("input[name='question7']:checked").value;
+  
+  document.getElementById("tab-yes").setAttribute("class", "hidden");
+  document.getElementById("tab-no").setAttribute("class", "hidden");
 
   if (answer1 === 'yes' && answer2 === 'logical') {
     document.getElementById("result").innerText = "C++";
@@ -47,10 +50,12 @@ function handleInput(event) {
   document.getElementById("result-container").scrollIntoView({behavior: 'smooth', block: 'center'});
   document.getElementById("submit-button").setAttribute("class", "hidden");
   document.getElementById("reset-button").removeAttribute("class");
+  document.getElementById("re-submit-button").removeAttribute("class");
 }
 
 function resetBtn () {
   document.getElementById("submit-button").removeAttribute("class");
+  document.getElementById("re-submit-button").setAttribute("class", "hidden");
   document.getElementById("result-container").setAttribute("class", "hidden");
   document.getElementById("tab-yes").setAttribute("class", "hidden");
   document.getElementById("tab-no").setAttribute("class", "hidden");
@@ -58,7 +63,7 @@ function resetBtn () {
   document.getElementById("reset-button").setAttribute("class", "hidden");
 }
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function() {
   const form = document.querySelector("form");
   const resetButton = document.getElementById('reset-button');
   form.addEventListener("submit", handleInput);
