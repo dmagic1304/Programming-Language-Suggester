@@ -36,11 +36,17 @@ function handleInput(event) {
   
   document.getElementById("name").innerText = name;
   document.getElementById("result-container").removeAttribute("class");
-  resetForm();
+  document.getElementById("submit-button").setAttribute("class", "hidden");
 }
 
 
 window.addEventListener("load", function(){
   const form = document.querySelector("form");
-  form.addEventListener("submit", handleInput);  ;
+  const resetButton = document.getElementById('reset-button');
+  form.addEventListener("submit", handleInput);
+  resetButton.addEventListener("click", function() {
+    document.getElementById("submit-button").removeAttribute("class");
+    document.getElementById("result-container").setAttribute("class", "hidden");
+  })
+
 })
