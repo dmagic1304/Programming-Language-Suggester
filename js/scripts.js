@@ -53,7 +53,7 @@ function handleInput(event) {
   document.getElementById("re-submit-button").removeAttribute("class");
 }
 
-function resetBtn () {
+function resetBtn() {
   document.getElementById("submit-button").removeAttribute("class");
   document.getElementById("re-submit-button").setAttribute("class", "hidden");
   document.getElementById("result-container").setAttribute("class", "hidden");
